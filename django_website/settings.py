@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "django_website.apps.accounts",
 ]
 
 MIDDLEWARE = [
@@ -120,7 +121,7 @@ USE_TZ = True
 
 STATIC_URL = "/static/"
 
-
-LOGIN_URL = "login"
-LOGOUT_REDIRECT_URL = "index"
-LOGIN_REDIRECT_URL = "index"
+# Django Auth Settings
+LOGIN_URL = "accounts:login"
+LOGOUT_REDIRECT_URL = "public:index"
+LOGIN_REDIRECT_URL = "public:index"
