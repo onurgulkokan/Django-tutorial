@@ -26,7 +26,7 @@ SECRET_KEY = "0(ki%e*tbi)q_l6248lzzp+b9raznhh&(z!kjf+8_)2$$v%5qy"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '0.0.0.0', '0.0.0.0:8000']
 
 
 # Application definition
@@ -75,10 +75,22 @@ WSGI_APPLICATION = "django_website.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
+
+POSTGRES_HOST = os.environ.get("POSTGRES_HOST", default="")
+POSTGRES_DB = os.environ.get("POSTGRES_DB", default="")
+POSTGRES_USER = os.environ.get("POSTGRES_USER", default="")
+POSTGRES_PASSWORD = os.environ.get("POSTGRES_PASSWORD", default="")
+
+
+
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "postgres",
+        "USER": "postgres",
+        "PASSWORD": "postgres",
+        "HOST": "postgres",
+        "PORT": 5432,
     }
 }
 
