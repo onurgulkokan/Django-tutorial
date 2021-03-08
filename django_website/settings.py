@@ -76,7 +76,7 @@ WSGI_APPLICATION = "django_website.wsgi.application"
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 
-POSTGRES_HOST = os.environ.get("POSTGRES_HOST", default="")
+POSTGRES_HOST = os.environ.get("POSTGRES_HOST", default="") # bu kodlarda hata var o yuzden "database kismine postgres yazdim"
 POSTGRES_DB = os.environ.get("POSTGRES_DB", default="")
 POSTGRES_USER = os.environ.get("POSTGRES_USER", default="")
 POSTGRES_PASSWORD = os.environ.get("POSTGRES_PASSWORD", default="")
@@ -132,6 +132,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = "/static/"
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static")
+]
 
 # Django Auth Settings
 LOGIN_URL = "accounts:login"

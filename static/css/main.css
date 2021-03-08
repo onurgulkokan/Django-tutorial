@@ -1,0 +1,69 @@
+#main {
+    padding-top: 74px;
+}
+
+
+@media (min-width: 992px) {
+    #main {
+      padding-top: 104px;
+    }
+}
+
+@font-face {
+    font-family: "Django Font";
+    src:
+    url("fonts/jaapokkisubtract-regular.woff") format("woff"),
+    url("fonts/Jaapokkisubtract-Regular.otf") format("opentype");
+}
+
+.navbar-brand {
+    font-family: "Django Font";
+}
+
+.hs-bg-primary {
+    background-color: #f2a154;
+}
+
+#mainNav .navbar-nav li.nav-item a.nav-link {
+    border-bottom: 2px solid transparent;
+    transition: border-bottom .2s, color .2s;
+}
+
+#mainNav .navbar-nav li.nav-item a.nav-link:hover {
+    color: #d89216;
+    border-color: #d89216;
+}
+
+#mainNav .navbar-nav li.nav-item a.nav-link.active {
+    background: none;
+    color: white;
+    border-color: #d89216;
+}
+
+#mainNav .navbar-nav li.nav-item a.nav-link.active:hover {
+    background: none;
+    color: #d89216;
+}
+
+.masthead .masthead-avatar {
+    width: 170px;
+    height: 170px;
+}
+
+.masthead {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+@media (min-width: 992px) {
+    .masthead {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+}
+
+.masthead {
+    background-image: url("../img/banner-charles-deluvio.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
